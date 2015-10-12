@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Django default" uuid="81c66b79-7526-4f50-ad3d-03e6a890d74e">
+      <user-name>root</user-name>
+      <schema-pattern>tutorialsdb.*</schema-pattern>
+      <default-schemas>tutorialsdb.*</default-schemas>
+    </data-source>
+  </component>
+</project>

@@ -25,7 +25,7 @@ SECRET_KEY = 'oog)ayq^rbumq7=ia-khupp4bb=qk^q5z6ca9^*9+xn3tb0=li'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost',]
 
 
 # Application definition
@@ -78,8 +78,10 @@ WSGI_APPLICATION = 'Tutorials4Life.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'tutorialsdb',
+        'USER': 'root',
+        'PASSWORD': 1111,
     }
 }
 
