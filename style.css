@@ -150,7 +150,40 @@ footer {
 }
 
 
-.guide_name{
-    float:top;
-    padding-right:20px;
+.guides_name{
+   position:absolute;
+    width:200px;
+    height: 50px;
+    right: 15px;
+    top:666px;
+    text-shadow:0 1px 1px black;
+    font-size:25px;
+}
+
+.lat_guid{
+    float:right;
+    width:200px;
+    height:37%;
+    border: 3px solid #69c;
+	border-radius:5px;
+    clear: right;
+    margin-right: 15px;
+    margin-top: 70px;
+}
+
+.pop_tut_name, .pop_tut_author, .pop_tut_category {
+    float:left;
+    width:230px;
+    border-right: 1px solid #69c;
+    height: 100%;
+    text-shadow:0 1px 1px black;
+    font-size:15px;
+}
+
+.pop_tut_likes{
+    float:left;
+    height: 100%;
+    width:95px;
+    text-shadow:0 1px 1px black;
+    font-size:15px;
 }
