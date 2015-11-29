@@ -40,7 +40,7 @@ footer {
 }
 
 .adress{
-	width:400px;
+	width:350px;
 	float:left;
 	padding-top:20px;
 	padding-left:45px;
@@ -48,18 +48,32 @@ footer {
 }
 
 .contacts{
-	width:350px;
+	width:250px;
 	float:left;
 	font-size:10pt;
 	padding-top:20px;
 	padding-left:70px;
 }
 
+.command{
+	width:400px;
+	float:left;
+	font-size:10pt;
+	padding-top:30px;
+    line-height: 40px;
+    font-size:15pt;
+}
+.com_text{
+    padding-right: 70px;
+    float:right;
+}
 .f_logo{
-	width:350px;
+	width:100px;
 	float:right;
 	padding-top:10px;
 }
+
+
 
 .im_logo_f{
 	float : right;
