@@ -130,6 +130,12 @@ footer {
 
 }
 
+.det_tutor_name{
+    float:left;
+    padding-left:380px;
+
+}
+
 .auth_name{
     float:right;
     padding-right:20px;
@@ -154,6 +160,17 @@ footer {
     margin-left: 50px;
 }
 
+.det_tutor{
+    border: 3px solid #69c;
+	border-radius:5px;
+    float:left;
+    width:790px;
+    height:85%;
+    margin-left: 50px;
+}
+
+
+
 .popular_auth{
     border: 3px solid #69c;
 	border-radius:5px;
@@ -162,6 +179,7 @@ footer {
     height:40%;
     margin-right: 15px;
 }
+
 
 
 .guides_name{
