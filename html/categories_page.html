@@ -4,7 +4,7 @@
   <head> 
     <meta charset = "utf-8">
     <link rel="stylesheet/less" href="main.less">
-    <link href="style.css" rel="stylesheet">
+    <link href="style_categories_page.css" rel="stylesheet">
     <script src="less.js" type="text/javascript"></script>
     <title>Tutorial4Life</title>
   </head>
@@ -13,43 +13,34 @@
 		
     <header>
       <div id='logo'>
-	<img src="logo.png" id='logo1' >
+	<img src="logo.jpg" id='logo1' >
+      </div>
+
+      <div style="position:absolute; left:300px; margin-top:-15px; color:#0066CC;">
+	<div style=" font-size:14pt;  margin-top:8px;">Author</div>
+	<div style=" font-size:14pt;  margin-top:8px;">Category</div>
       </div>
 
       <form id='authrization'>
 	<table id="login_table">
 
-	  <tr>
-    	    <td class="username_title_class">username</td>
-
-            <td class="username_class" width="100%">
-      	      <input name="username_name" style="width: 100%;" class="auth" type="text" >
-    	    </td>
+	  <tr style="color:#0066CC;font-size:16pt ">
+    	    <td ><div style="position:absolute;left:990px;  "> Hello, </div></td>
+	    <td  style="position:absolute;left:1055px;"> username </td>
 	  </tr>
 
 
-	  <tr>
-            <td class="password_title_class">password</td>
-
-    	    <td class="password_class">
-      	      <input name="password_name" style="width: 100%;" class="auth" type="password" >
-    	    </td>
-  	  </tr>
-
   	  <tr>
-    	    <td class="sign_in">
-	      <input value="sign in" name="sign_in_name" id="sign_in_button" type="submit" >
-	    </td>
+	    <td class="log_out">
+      	      <input value="log out" name="log_out_name" id='log_out_button' type="submit" >
+    	    </td>
 
-    	    <td class="sign_up">
-      	      <input value="sign up" name="sign_up_name" id="sign_up_button" type="submit" >
+	    <td class="add_tutorial">
+      	      <input value="add new tutorial" name="add_tutorial_name" id='add_tutorial_button' type="submit" >
     	    </td>
   	  </tr>
+
 	</table>
-
-
-
-
       </form>
     </header>
 
@@ -58,19 +49,28 @@
 
       <div class= 'main_head'>
 	<div style="color:#0066CC; font-size:17pt; font-weight:800; position:absolute;left:160px;"> Categories </div>
-	<div style="color:#0066CC; font-size:17pt; font-weight:800;  position:absolute; left:540px;"> Popular tutorials </div>
+	<div style="color:#0066CC; font-size:17pt; font-weight:800;  position:absolute; left:400px;"> Tutorials from this category </div>
 	<div style="color:#0066CC; font-size:17pt; font-weight:800;  position:absolute; left:990px; "> Popular authors </div>
       </div>
 
 
-      <div class= 'categories'>hjjlhjhn </div>
+      <div class= 'categories'></div>
 
-      <div class= 'popular_tutorials'>
-	<div class= 'popular_tutorial1'></div>
-	<div class= 'popular_tutorial2'></div>
-	<div class= 'popular_tutorial3'></div>
-	<div class= 'popular_tutorial4'></div>
-      </div>
+      <div class= 'tutorial_1'></div>
+
+        <div class= 'tutorial_2'></div>
+
+        <div class= 'tutorial_3'></div>
+
+        <div class= 'tutorial_4'></div>
+
+        <div class= 'tutorial_5'> </div>
+
+        <div class= 'tutorial_6'></div>
+
+        <div class= 'tutorial_7'></div>
+
+
 
 
 

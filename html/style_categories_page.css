@@ -3,23 +3,23 @@ body{
 }
 
 header {
-	width: 80%; 
+	width: 80%;
 	height: 120px;
 	background: #E5F9FF;
 	margin-left:10%;
 	margin-right:10%;
 	float:right;
 
-	
+
 }
 
 #logo{
 	font-weight: 600;
 	font-family: Geneva, Arial, Helvetica, sans-serif;
-	font-size:18pt;	
+	font-size:18pt;
 	height:60px;
 	padding-left:50px;
-	
+
 }
 
 #logo1{
@@ -36,7 +36,7 @@ header {
     margin-left: 835px;
     margin-top: -58px;
     padding-right:10px;
-    width: 20%; 
+    width: 20%;
     height: 110px;
 }
 
@@ -71,7 +71,7 @@ header {
     margin-left: 3px;
     margin-top: 20px;
     height:25px;
-    background-image: none; 
+    background-image: none;
     background-color: transparent;
     border:0px;
 
@@ -83,7 +83,7 @@ header {
     margin-left: 5px;
     margin-top: 20px;
     height:25px;
-    background-image: none; 
+    background-image: none;
     background-color: transparent;
     border:0px;
 
@@ -103,7 +103,7 @@ header {
 	margin-top:120px;
 	clear: both;
 
-	
+
 }
 
 .main_head{
@@ -127,19 +127,111 @@ header {
 	background: #F2F2F2;
 }
 
-.tutorial{
+.tutorial_1{
         border: 4px solid #4AD2FF;
 	border-radius: 12px;
 	border-radius: 12px;
-	height: 600px;
+	height: 70px;
 	width:590px;
-	position:absolute; 
+	position:absolute;
 	left:355px;
 	padding-top:20px;
 	padding-left:15px;
 	margin-left:10px;
 	background: #F2F2F2;
 }
+
+.tutorial_2{
+        border: 4px solid #4AD2FF;
+	border-radius: 12px;
+	border-radius: 12px;
+	height: 70px;
+	width:590px;
+	position:absolute;
+	left:355px;
+    top:350px;
+	padding-top:20px;
+	padding-left:15px;
+	margin-left:10px;
+	background: #F2F2F2;
+}
+
+.tutorial_3{
+        border: 4px solid #4AD2FF;
+	border-radius: 12px;
+	border-radius: 12px;
+	height: 70px;
+	width:590px;
+	position:absolute;
+	left:355px;
+    top:480px;
+	padding-top:20px;
+	padding-left:15px;
+	margin-left:10px;
+	background: #F2F2F2;
+}
+
+.tutorial_4{
+        border: 4px solid #4AD2FF;
+	border-radius: 12px;
+	border-radius: 12px;
+	height: 70px;
+	width:590px;
+	position:absolute;
+	left:355px;
+    top:610px;
+	padding-top:20px;
+	padding-left:15px;
+	margin-left:10px;
+	background: #F2F2F2;
+}
+
+.tutorial_5{
+        border: 4px solid #4AD2FF;
+	border-radius: 12px;
+	border-radius: 12px;
+	height: 70px;
+	width:590px;
+	position:absolute;
+	left:355px;
+    top:740px;
+	padding-top:20px;
+	padding-left:15px;
+	margin-left:10px;
+	background: #F2F2F2;
+}
+
+.tutorial_6{
+        border: 4px solid #4AD2FF;
+	border-radius: 12px;
+	border-radius: 12px;
+	height: 70px;
+	width:590px;
+	position:absolute;
+	left:355px;
+    top:870px;
+	padding-top:20px;
+	padding-left:15px;
+	margin-left:10px;
+	background: #F2F2F2;
+}
+
+.tutorial_7{
+        border: 4px solid #4AD2FF;
+	border-radius: 12px;
+	border-radius: 12px;
+	height: 70px;
+	width:590px;
+	position:absolute;
+	left:355px;
+    top:1000px;
+	padding-top:20px;
+	padding-left:15px;
+	margin-left:10px;
+	background: #F2F2F2;
+}
+
+
 
 .comment{
 	        border: 4px solid #4AD2FF;
@@ -164,7 +256,7 @@ header {
 	height: 60%;
 	width:150px;
 	position:absolute;
-	left: 1025px; 
+	left: 1025px;
 	padding-top:20px;
 	padding-left:10px;
 	margin-left:10px;
@@ -177,7 +269,7 @@ header {
 	height: 60%;
 	width:150px;
 	position:absolute;
-	left: 1025px; 
+	left: 1025px;
 	top: 680px;
 	padding-top:20px;
 	padding-left:10px;
@@ -186,13 +278,13 @@ header {
 }
 
 footer {
-	width: 80%; 
+	width: 80%;
 	height: 120px;
 	background:#E5F9FF;
 	margin-left:10%;
 	margin-right:10%;
 	float:right;
 
-	
+
 }
 
