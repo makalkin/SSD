@@ -150,7 +150,7 @@ footer {
 	border-radius:5px;
     float:left;
     width:790px;
-    height:10%;
+    min-height:10%;
     margin-left: 50px;
 }
 
@@ -194,3 +194,28 @@ footer {
     margin-top: 70px;
 }
 
+.pop_tutorial{
+    float:left;
+    width:640px;
+}
+
+
+.pop_au_cat {
+    float: right;
+    width: 150px;
+}
+
+
+.pop_author{
+    float:right;
+    width:150px;
+}
+
+.pop_category{
+    float:right;
+    width:150px;
+}
+
+.pop_shortdesc{
+    margin-left: 20px;
+}
