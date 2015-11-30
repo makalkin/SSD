@@ -97,6 +97,14 @@ footer {
     font-size:12pt;
 }
 
+.logout_b{
+    float:right;
+    background: #69c;
+    border:0;
+    padding-right:5px;
+    font-size:12pt;
+}
+
 .sign_in_b{
     float:right;
     background: #69c;
