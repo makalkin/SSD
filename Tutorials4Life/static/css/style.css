@@ -1,0 +1,36 @@
+body * {
+	border-width:1px;
+	border-bottom-color: black;
+	border-style: dashed;
+}
+
+header{
+	min-height: 100px;
+	width: 100%;
+}
+
+main {
+	float: left;
+	width: 100%;
+	min-height: 1000px;
+
+}
+
+.left{
+	float: left;
+}
+
+.content{
+	width: auto;
+	margin: auto;
+}
+
+.right{
+	float: right;
+}
+
+footer{
+	clear: both;
+	bottom: 0;
+	margin-bottom: -10px;
+}

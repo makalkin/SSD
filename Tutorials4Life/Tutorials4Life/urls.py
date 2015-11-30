@@ -15,7 +15,18 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from apps.common.views import *
+
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', index, name='index'),
+    url(r'^category/(?P<category_title>\w+)$', category_detail, name='category'),
+    url(r'^tutorial/(?P<tutorial_title>\w+)/(?P<section_title>\w+)$', section_detail, name='section'),
+    url(r'^author/(?P<author>\w+)$', author_detail, name='author'),
+    url(r'^profile$', profile, name='profile'),
+
+    url(r'^tinymce/', include('tinymce.urls')),
+    url('', include('social.apps.django_app.urls', namespace='social')),
+    url('', include('django.contrib.auth.urls', namespace='auth')),
 ]
