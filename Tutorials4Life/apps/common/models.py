@@ -24,6 +24,7 @@ class Tutorial(models.Model):
     category = models.ForeignKey(Category)
     author = models.ForeignKey(User)
     publish_date = models.DateTimeField(null=True)
+    short_description = HTMLField(max_length=255)
 
     class Meta:
         verbose_name = _('Tutorial')
@@ -41,3 +42,10 @@ class Section(models.Model):
         verbose_name = _('Section')
         verbose_name_plural = _('Sections')
         ordering = ['order', ]
+
+    def __unicode__(self):
+        return self.title
+
+    def __str__(self):
+        return self.title
+

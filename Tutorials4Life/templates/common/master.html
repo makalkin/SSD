@@ -1,71 +1,116 @@
 <!DOCTYPE HTML >
-<html>
+<html ng-app="StarterApp">
     <head>
         <meta charset = "utf-8">
-        <link rel="stylesheet" href="static/css/style.css">
+{#        <link rel="stylesheet" href="static/css/style.css">#}
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.css">
         <title>Tutorial4Life</title>
+        <style>
+            footer md-list-item{display: inline;}
+             .card-media {
+             background-color: #999999; }
+            .md-toolbar-tools h1 {
+              font-size: inherit;
+              font-weight: inherit;
+              margin: inherit;
+            }
+
+            md-sidenav.md-locked-open {
+              width: 150px !important;
+              min-width: 150px !important;
+              max-width: 150px !important;
+            }
+        </style>
     </head>
-    <body>
+    <body layout="column" ng-controller="AppController as vm">
 
-        <header>
-            <p>
-                <ul>
+        <md-toolbar class="md-theme-light" layout="row">
+            <md-button ng-click="vm.toggleSidenav('left')" hide-gt-sm class="md-icon-button">
+                <md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg">
+                </md-icon>
+            </md-button>
+            <h2 class="md-toolbar-tools">
+              <a href="/"><span>Tutorials4Life</span></a>
+            </h2>
+
+            <p layout="row" layout-align="center center">
+
                 {% if user and not user.is_anonymous %}
-                    <li>
-                        <a>Hello {{ user.get_full_name|default:user.username }}!</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'auth:logout' %}?next={{ request.path }}">Logout</a>
-                    </li>
-                {% else %}
-                    <li>
-                        <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">Login with Facebook</a>
-                    </li>
-{#                    <li>#}
-{#                        <a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}">Login with Google</a>#}
-{#                    </li>#}
-{#                    <li>#}
-{#                        <a href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}">Login with Twitter</a>#}
-{#                    </li>#}
-                {% endif %}
-                </ul>
-            </p>
-            <nav>
-                smth here nav
-            </nav>
-        </header>
+                        <md-button >{{ user.get_full_name|default:user.username }}</md-button>
+                        <md-button href="{% url 'auth:logout' %}?next={{ request.path }}">Logout</md-button>
 
-        <main>
-            <aside class="left">
-                {% for category in categories %}
-                    <div class="category">
-                        {{ category }}
-                    </div>
+                {% else %}
+                        <md-button href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">Login with Facebook</md-button>
+
+                {% endif %}
+
+            </p>
+        </md-toolbar>
+
+
+
+        <main layout="row" flex="grow">
+            <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-4dp" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+                  {% for category in categories %}
+                      <md-button class="md-accent" href="{% url 'category' category %}">
+                          {{ category }}
+                      </md-button>
+                    {% endfor %}
+            </md-sidenav>
+            <div layout="column" flex="grow" id="content" >
+            {% block content %}
+                {% for tutorial in tutorials %}
+                <md-card class="md-padding" layout-wrap layout-align="start center end">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">{{ tutorial.title }}</span>
+{#                            <span class="md-subhead">Small</span>#}
+                        </md-card-title-text>
+{#                        <md-card-title-media>#}
+{#                            <div class="md-media-sm card-media">#}
+{##}
+{#                            </div>#}
+{#                        </md-card-title-media>#}
+                    </md-card-title>
+                    <md-card-content>
+                        <p>
+                        {{ tutorial.short_description|safe }}
+                        </p>
+                    </md-card-content>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button href="{% url 'section' tutorial_title=tutorial.title section_title=tutorial.section_set.first.title %}" class="md-raised md-primary">Read</md-button>
+                        <md-button class="md-accent">by Makal</md-button>
+                    </md-card-actions>
+                </md-card>
                 {% endfor %}
-            </aside>
-            <div class="content">
-                <div class="author">
-                        Makal
-                </div>
-                <a href="">
-                    <div class="tutorial">
-                        <div class="title">
-                            Le meat wide sprite
-                        </div>
-                        <div class="shortdesc">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, illum nesciunt nisi possimus reiciendis temporibus? Asperiores assumenda consectetur dolore eius fugiat in nisi officiis quae rem sint sunt, voluptatibus voluptatum?
-                        </div>
-                    </div>
-                </a>
+            {% endblock %}
+
             </div>
-            <aside class="right">
-                smth here right
-            </aside>
+{#            <aside class="right">#}
+{#                smth here right#}
+{#            </aside>#}
         </main>
 
-        <footer>
-        smth here bottom
+       <!-- Angular Material Dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
 
-        </footer>
+
+    <!-- Angular Material Javascript now available via Google CDN; version 0.11.2 used here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.js"></script>
+
+    <script>
+        var app = angular.module('StarterApp', ['ngMaterial']);
+
+        app.controller('AppController', function($mdSidenav) {
+          var vm = this;
+
+          vm.toggleSidenav = function(menuId) {
+            $mdSidenav(menuId).toggle();
+          };
+
+        });
+    </script>
     </body>
 </html>

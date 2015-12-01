@@ -70,6 +70,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'social.apps.django_app.context_processors.backends',
                 'social.apps.django_app.context_processors.login_redirect',
+                'apps.common.context.default'
             ],
         },
     },
@@ -80,6 +81,12 @@ WSGI_APPLICATION = 'Tutorials4Life.wsgi.application'
 
 SOCIAL_AUTH_FACEBOOK_KEY = '918343474908171'
 SOCIAL_AUTH_FACEBOOK_SECRET = '72d764d9d201ba046ec1600afadbcb84'
+
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_photos']
+
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+  'fields': 'id, name, email, picture',
+}
 
 AUTHENTICATION_BACKENDS = (
    'social.backends.facebook.FacebookOAuth2',

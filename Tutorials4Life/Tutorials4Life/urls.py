@@ -21,8 +21,8 @@ from apps.common.views import *
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', index, name='index'),
-    url(r'^category/(?P<category_title>\w+)$', category_detail, name='category'),
-    url(r'^tutorial/(?P<tutorial_title>\w+)/(?P<section_title>\w+)$', section_detail, name='section'),
+    url(r'^category/(?P<category_title>([\w ]+))$', category_detail, name='category'),
+    url(r'^tutorial/(?P<tutorial_title>.*)/(?P<section_title>.*)', section_detail, name='section'),
     url(r'^author/(?P<author>\w+)$', author_detail, name='author'),
     url(r'^profile$', profile, name='profile'),
 

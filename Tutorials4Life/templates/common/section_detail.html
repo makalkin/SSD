@@ -1,0 +1,17 @@
+{% extends 'common/master.html' %}
+
+{% block content %}
+    <md-toolbar class="md-accent md-hue-2" layout-padding>{{ tutorial.title }}</md-toolbar>
+    <md-content>
+        <md-tabs md-dynamic-height md-border-bottom>
+            {% for section in tutorial.section_set.all %}
+                <md-tab label="{{ section.title }}">
+                    <md-content class="md-padding">
+                      <h1 class="md-display-2">{{ section.title }}</h1>
+                      <p>{{ section.content|safe }}</p>
+                    </md-content>
+                </md-tab>
+            {% endfor %}
+        </md-tabs>
+    </md-content>
+{% endblock %}
